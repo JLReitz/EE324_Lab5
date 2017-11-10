@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
-//Date        : Tue Nov  7 14:12:03 2017
+//Date        : Thu Nov  9 16:54:41 2017
 //Host        : Jensen-Surface running 64-bit major release  (build 9200)
 //Command     : generate_target System_wrapper.bd
 //Design      : System_wrapper
@@ -31,7 +31,12 @@ module System_wrapper
     FIXED_IO_ps_clk,
     FIXED_IO_ps_porb,
     FIXED_IO_ps_srstb,
-    SW_0);
+    SW,
+    VGA_B,
+    VGA_G,
+    VGA_HS,
+    VGA_R,
+    VGA_VS);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -53,7 +58,12 @@ module System_wrapper
   inout FIXED_IO_ps_clk;
   inout FIXED_IO_ps_porb;
   inout FIXED_IO_ps_srstb;
-  input [3:0]SW_0;
+  input [3:0]SW;
+  output [4:0]VGA_B;
+  output [5:0]VGA_G;
+  output VGA_HS;
+  output [4:0]VGA_R;
+  output VGA_VS;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -76,7 +86,12 @@ module System_wrapper
   wire FIXED_IO_ps_clk;
   wire FIXED_IO_ps_porb;
   wire FIXED_IO_ps_srstb;
-  wire [3:0]SW_0;
+  wire [3:0]SW;
+  wire [4:0]VGA_B;
+  wire [5:0]VGA_G;
+  wire VGA_HS;
+  wire [4:0]VGA_R;
+  wire VGA_VS;
 
   System System_i
        (.DDR_addr(DDR_addr),
@@ -100,5 +115,10 @@ module System_wrapper
         .FIXED_IO_ps_clk(FIXED_IO_ps_clk),
         .FIXED_IO_ps_porb(FIXED_IO_ps_porb),
         .FIXED_IO_ps_srstb(FIXED_IO_ps_srstb),
-        .SW_0(SW_0));
+        .SW(SW),
+        .VGA_B(VGA_B),
+        .VGA_G(VGA_G),
+        .VGA_HS(VGA_HS),
+        .VGA_R(VGA_R),
+        .VGA_VS(VGA_VS));
 endmodule
