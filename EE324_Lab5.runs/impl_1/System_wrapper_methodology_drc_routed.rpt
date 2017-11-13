@@ -1,8 +1,8 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
-| Date         : Thu Nov  9 16:59:09 2017
-| Host         : Jensen-Surface running 64-bit major release  (build 9200)
+| Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
+| Date         : Sun Nov 12 18:11:29 2017
+| Host         : Jensen-Desktop running 64-bit major release  (build 9200)
 | Command      : report_methodology -file System_wrapper_methodology_drc_routed.rpt -pb System_wrapper_methodology_drc_routed.pb -rpx System_wrapper_methodology_drc_routed.rpx
 | Design       : System_wrapper
 | Device       : xc7z010clg400-1
@@ -23,12 +23,11 @@ Table of Contents
           Floorplan: design_1
       Design limits: <entire design considered>
              Max violations: <unlimited>
-             Violations found: 22
+             Violations found: 2
 +-----------+----------+----------------------------------------------------+------------+
 | Rule      | Severity | Description                                        | Violations |
 +-----------+----------+----------------------------------------------------+------------+
 | TIMING-4  | Warning  | Invalid primary clock redefinition on a clock tree | 1          |
-| TIMING-18 | Warning  | Missing input or output delay                      | 20         |
 | TIMING-27 | Warning  | Invalid primary clock on hierarchical pin          | 1          |
 +-----------+----------+----------------------------------------------------+------------+
 
@@ -37,106 +36,6 @@ Table of Contents
 TIMING-4#1 Warning
 Invalid primary clock redefinition on a clock tree  
 Invalid clock redefinition on a clock tree. The primary clock System_i/clk_wiz_0/inst/clk_in1 is defined downstream of clock clk_fpga_0 and overrides its insertion delay and/or waveform definition
-Related violations: <none>
-
-TIMING-18#1 Warning
-Missing input or output delay  
-An input delay is missing on SW[0] relative to clock(s) clk_fpga_0
-Related violations: <none>
-
-TIMING-18#2 Warning
-Missing input or output delay  
-An input delay is missing on SW[1] relative to clock(s) clk_fpga_0
-Related violations: <none>
-
-TIMING-18#3 Warning
-Missing input or output delay  
-An input delay is missing on SW[2] relative to clock(s) clk_fpga_0
-Related violations: <none>
-
-TIMING-18#4 Warning
-Missing input or output delay  
-An input delay is missing on SW[3] relative to clock(s) clk_fpga_0
-Related violations: <none>
-
-TIMING-18#5 Warning
-Missing input or output delay  
-An output delay is missing on VGA_B[0] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#6 Warning
-Missing input or output delay  
-An output delay is missing on VGA_B[1] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#7 Warning
-Missing input or output delay  
-An output delay is missing on VGA_B[2] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#8 Warning
-Missing input or output delay  
-An output delay is missing on VGA_B[3] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#9 Warning
-Missing input or output delay  
-An output delay is missing on VGA_B[4] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#10 Warning
-Missing input or output delay  
-An output delay is missing on VGA_G[0] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#11 Warning
-Missing input or output delay  
-An output delay is missing on VGA_G[1] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#12 Warning
-Missing input or output delay  
-An output delay is missing on VGA_G[2] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#13 Warning
-Missing input or output delay  
-An output delay is missing on VGA_G[3] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#14 Warning
-Missing input or output delay  
-An output delay is missing on VGA_G[4] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#15 Warning
-Missing input or output delay  
-An output delay is missing on VGA_G[5] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#16 Warning
-Missing input or output delay  
-An output delay is missing on VGA_R[0] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#17 Warning
-Missing input or output delay  
-An output delay is missing on VGA_R[1] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#18 Warning
-Missing input or output delay  
-An output delay is missing on VGA_R[2] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#19 Warning
-Missing input or output delay  
-An output delay is missing on VGA_R[3] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
-Related violations: <none>
-
-TIMING-18#20 Warning
-Missing input or output delay  
-An output delay is missing on VGA_R[4] relative to clock(s) System_i/clk_wiz_0/inst/clk_in1
 Related violations: <none>
 
 TIMING-27#1 Warning
