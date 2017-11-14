@@ -48,11 +48,11 @@
 
 
 // IP VLNV: xilinx.com:user:Zybo_VGA_Basic:1.0
-// IP Revision: 4
+// IP Revision: 6
 
-(* X_CORE_INFO = "Zybo_VGA_Basic_v1_0,Vivado 2017.3" *)
+(* X_CORE_INFO = "Zybo_VGA_Basic_v1_0,Vivado 2017.3.1" *)
 (* CHECK_LICENSE_TYPE = "System_Zybo_VGA_Basic_0_1,Zybo_VGA_Basic_v1_0,{}" *)
-(* CORE_GENERATION_INFO = "System_Zybo_VGA_Basic_0_1,Zybo_VGA_Basic_v1_0,{x_ipProduct=Vivado 2017.3,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Zybo_VGA_Basic,x_ipVersion=1.0,x_ipCoreRevision=4,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=6}" *)
+(* CORE_GENERATION_INFO = "System_Zybo_VGA_Basic_0_1,Zybo_VGA_Basic_v1_0,{x_ipProduct=Vivado 2017.3.1,x_ipVendor=xilinx.com,x_ipLibrary=user,x_ipName=Zybo_VGA_Basic,x_ipVersion=1.0,x_ipCoreRevision=6,x_ipLanguage=VERILOG,x_ipSimLanguage=MIXED,C_S_AXI_DATA_WIDTH=32,C_S_AXI_ADDR_WIDTH=6}" *)
 (* DowngradeIPIdentifiedWarnings = "yes" *)
 module System_Zybo_VGA_Basic_0_1 (
   pixel_clk,

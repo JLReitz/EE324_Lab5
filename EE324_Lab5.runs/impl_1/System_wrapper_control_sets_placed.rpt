@@ -1,12 +1,12 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
-------------------------------------------------------------------------------------
-| Tool Version : Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-| Date         : Sun Nov 12 18:11:10 2017
-| Host         : Jensen-Desktop running 64-bit major release  (build 9200)
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
+| Date         : Tue Nov 14 13:07:53 2017
+| Host         : Jensen-Surface running 64-bit major release  (build 9200)
 | Command      : report_control_sets -file System_wrapper_control_sets_placed.rpt
 | Design       : System_wrapper
 | Device       : xc7z010
-------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------
 
 Control Set Information
 
@@ -31,12 +31,12 @@ Table of Contents
 +--------------+-----------------------+------------------------+-----------------+--------------+
 | Clock Enable | Synchronous Set/Reset | Asynchronous Set/Reset | Total Registers | Total Slices |
 +--------------+-----------------------+------------------------+-----------------+--------------+
-| No           | No                    | No                     |             384 |          110 |
-| No           | No                    | Yes                    |             140 |           48 |
-| No           | Yes                   | No                     |             129 |           52 |
-| Yes          | No                    | No                     |             602 |          152 |
-| Yes          | No                    | Yes                    |             100 |           23 |
-| Yes          | Yes                   | No                     |             484 |          143 |
+| No           | No                    | No                     |             386 |          103 |
+| No           | No                    | Yes                    |             140 |           47 |
+| No           | Yes                   | No                     |             129 |           43 |
+| Yes          | No                    | No                     |             602 |          155 |
+| Yes          | No                    | Yes                    |             100 |           22 |
+| Yes          | Yes                   | No                     |             484 |          145 |
 +--------------+-----------------------+------------------------+-----------------+--------------+
 
 
