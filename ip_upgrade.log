@@ -1,6 +1,111 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 --------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
+| Date         : Thu Nov 16 16:39:45 2017
+| Host         : Jensen-Surface running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'System_Zybo_VGA_Basic_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of System_Zybo_VGA_Basic_0_1 (xilinx.com:user:Zybo_VGA_Basic:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
+| Date         : Thu Nov 16 16:07:33 2017
+| Host         : Jensen-Surface running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'System_Zybo_VGA_Basic_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of System_Zybo_VGA_Basic_0_1 (xilinx.com:user:Zybo_VGA_Basic:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
+| Date         : Thu Nov 16 15:43:10 2017
+| Host         : Jensen-Surface running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'System_Zybo_VGA_Basic_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of System_Zybo_VGA_Basic_0_1 (xilinx.com:user:Zybo_VGA_Basic:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
+| Date         : Thu Nov 16 15:18:07 2017
+| Host         : Jensen-Surface running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'System_Zybo_VGA_Basic_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of System_Zybo_VGA_Basic_0_1 (xilinx.com:user:Zybo_VGA_Basic:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
+| Date         : Wed Nov 15 09:02:29 2017
+| Host         : Jensen-Surface running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z010clg400-1
+--------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'System_Zybo_VGA_Basic_0_1'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of System_Zybo_VGA_Basic_0_1 (xilinx.com:user:Zybo_VGA_Basic:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
+--------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
 | Date         : Tue Nov 14 14:30:31 2017
 | Host         : Jensen-Surface running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

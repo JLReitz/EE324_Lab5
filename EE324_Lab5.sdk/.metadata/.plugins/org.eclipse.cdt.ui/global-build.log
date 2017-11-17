@@ -1,4 +1,29 @@
-13:31:36 **** Build of project Lab5_bsp ****
+16:46:39 **** Clean-only build of configuration Debug for project Lab5 ****
+make clean 
+rm -rf  ./src/main.o  ./src/main.d  Lab5.elf.size  Lab5.elf
+' '
+16:46:39 **** Clean-only build of project Lab5_bsp ****
+make -k clean 
+make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/cpu_cortexa9_v2_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/ddrps_v1_0/src -s clean 
+make -C ps7_cortexa9_0/libsrc/devcfg_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/dmaps_v2_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/emacps_v3_5/src -s clean 
+make -C ps7_cortexa9_0/libsrc/gpiops_v3_3/src -s clean 
+make -C ps7_cortexa9_0/libsrc/qspips_v3_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scugic_v3_8/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scutimer_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/scuwdt_v2_1/src -s clean 
+make -C ps7_cortexa9_0/libsrc/standalone_v6_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/uartps_v3_4/src -s clean 
+make -C ps7_cortexa9_0/libsrc/xadcps_v2_2/src -s clean 
+make -C ps7_cortexa9_0/libsrc/Zybo_VGA_Basic_v1_0/src -s clean 
+rm: cannot lstat `*.o': Invalid argument
+make[1]: *** [clean] Error 1
+make: *** [ps7_cortexa9_0/libsrc/Zybo_VGA_Basic_v1_0/src/make.clean] Error 2
+make: Target `clean' not remade because of errors.
+16:46:41 **** Build of project Lab5_bsp ****
 make -k all 
 "Running Make include in ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src"
 make -C ps7_cortexa9_0/libsrc/coresightps_dcc_v1_4/src -s include  "SHELL=CMD" "COMPILER=arm-none-eabi-gcc" "ARCHIVER=arm-none-eabi-ar" "COMPILER_FLAGS=  -O2 -c" "EXTRA_COMPILER_FLAGS=-mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -nostartfiles -Wall -Wextra"
@@ -84,132 +109,7 @@ Zybo_VGA_Basic_selftest.c:36:6: warning: unused variable 'Index' [-Wunused-varia
   int Index;
       ^~~~~
 'Finished building libraries'
-
-**** Build of configuration Debug for project Lab5 ****
-
-Nothing to build for project Lab5
-13:32:07 **** Auto Build of configuration Debug for project Lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-'Finished building: ../src/main.c'
-' '
-'Building target: Lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-../../Lab5_bsp/ps7_cortexa9_0/lib\libxil.a(xil-crt0.o): In function `_start':
-xil-crt0.S:(.text+0x68): undefined reference to `main'
-collect2.exe: error: ld returned 1 exit status
-make: *** [Lab5.elf] Error 1
-13:42:44 **** Auto Build of configuration Debug for project Lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:31:6: warning: return type of 'main' is not 'int' [-Wmain]
- void main()
-      ^~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: Lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19092	   1148	  22568	  42808	   a738	Lab5.elf
-'Finished building: Lab5.elf.size'
-' '
-13:48:02 **** Auto Build of configuration Debug for project Lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:31:6: warning: return type of 'main' is not 'int' [-Wmain]
- void main()
-      ^~~~
-../src/main.c: In function 'main':
-../src/main.c:42:20: error: 'VGA_V_LR' undeclared (first use in this function)
-  writeValue((u32 *)VGA_V_LR, (u32)0);
-                    ^~~~~~~~
-../src/main.c:42:20: note: each undeclared identifier is reported only once for each function it appears in
-make: *** [src/main.o] Error 1
-13:48:25 **** Auto Build of configuration Debug for project Lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:31:6: warning: return type of 'main' is not 'int' [-Wmain]
- void main()
-      ^~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: Lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19276	   1148	  22568	  42992	   a7f0	Lab5.elf
-'Finished building: Lab5.elf.size'
-' '
-13:50:21 **** Auto Build of configuration Debug for project Lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-'Building file: ../src/main.c'
-'Invoking: ARM v7 gcc compiler'
-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
-../src/main.c:31:6: warning: return type of 'main' is not 'int' [-Wmain]
- void main()
-      ^~~~
-'Finished building: ../src/main.c'
-' '
-'Building target: Lab5.elf'
-'Invoking: ARM v7 gcc linker'
-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
-'Finished building target: Lab5.elf'
-' '
-'Invoking: ARM v7 Print Size'
-arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
-   text	   data	    bss	    dec	    hex	filename
-  19276	   1148	  22568	  42992	   a7f0	Lab5.elf
-'Finished building: Lab5.elf.size'
-' '
-13:50:23 **** Auto Build of configuration Debug for project Lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-13:51:45 **** Incremental Build of configuration Debug for project Lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-13:51:51 **** Incremental Build of configuration Debug for project Lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-13:52:22 **** Incremental Build of configuration Debug for project Lab5 ****
-make pre-build main-build 
-a9-linaro-pre-build-step
-' '
-make: Nothing to be done for `main-build'.
-13:53:18 **** Auto Build of configuration Debug for project Lab5 ****
+16:46:58 **** Build of configuration Debug for project Lab5 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '
@@ -232,7 +132,389 @@ arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
   19272	   1148	  22568	  42988	   a7ec	Lab5.elf
 'Finished building: Lab5.elf.size'
 ' '
-13:53:56 **** Incremental Build of configuration Debug for project Lab5 ****
+16:47:39 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:47:58 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:31:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19272	   1148	  22568	  42988	   a7ec	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:48:01 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:53:10 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:55:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19364	   1148	  22568	  43080	   a848	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:53:13 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:55:02 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:65:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19444	   1148	  22568	  43160	   a898	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:55:24 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:55:36 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:55:38 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:55:51 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:55:54 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:56:07 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:56:11 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:56:26 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:56:30 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:56:32 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:57:13 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:57:16 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+16:57:29 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+16:57:31 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:01:00 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+17:01:19 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:01:42 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+17:01:44 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:02:05 **** Auto Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+'Building file: ../src/main.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/main.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -I../../Lab5_bsp/ps7_cortexa9_0/include -MMD -MP -MF"src/main.d" -MT"src/main.o" -o "src/main.o" "../src/main.c"
+../src/main.c:70:6: warning: return type of 'main' is not 'int' [-Wmain]
+ void main()
+      ^~~~
+'Finished building: ../src/main.c'
+' '
+'Building target: Lab5.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -L../../Lab5_bsp/ps7_cortexa9_0/lib -o "Lab5.elf"  ./src/main.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: Lab5.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size Lab5.elf  |tee "Lab5.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  19484	   1148	  22568	  43200	   a8c0	Lab5.elf
+'Finished building: Lab5.elf.size'
+' '
+17:02:13 **** Incremental Build of configuration Debug for project Lab5 ****
+make pre-build main-build 
+a9-linaro-pre-build-step
+' '
+make: Nothing to be done for `main-build'.
+17:02:24 **** Incremental Build of configuration Debug for project Lab5 ****
 make pre-build main-build 
 a9-linaro-pre-build-step
 ' '

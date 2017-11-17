@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/Documents/SourceTree/EE324_Lab5/EE324_Lab5.runs/System_proc_sys_reset_0_1_synth_1'
+HD_PWD='C:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.runs/System_proc_sys_reset_0_1_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

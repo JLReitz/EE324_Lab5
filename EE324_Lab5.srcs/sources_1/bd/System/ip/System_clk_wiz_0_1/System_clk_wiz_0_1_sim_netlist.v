@@ -1,10 +1,10 @@
 // Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2017.3 (win64) Build 2018833 Wed Oct  4 19:58:22 MDT 2017
-// Date        : Sun Nov 12 18:02:14 2017
-// Host        : Jensen-Desktop running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
+// Date        : Thu Nov 16 15:46:31 2017
+// Host        : Jensen-Surface running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
-//               d:/Documents/SourceTree/EE324_Lab5/EE324_Lab5.srcs/sources_1/bd/System/ip/System_clk_wiz_0_1/System_clk_wiz_0_1_sim_netlist.v
+//               C:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.srcs/sources_1/bd/System/ip/System_clk_wiz_0_1/System_clk_wiz_0_1_sim_netlist.v
 // Design      : System_clk_wiz_0_1
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -91,12 +91,12 @@ module System_clk_wiz_0_1_System_clk_wiz_0_1_clk_wiz
   (* BOX_TYPE = "PRIMITIVE" *) 
   MMCME2_ADV #(
     .BANDWIDTH("OPTIMIZED"),
-    .CLKFBOUT_MULT_F(37.125000),
+    .CLKFBOUT_MULT_F(36.375000),
     .CLKFBOUT_PHASE(0.000000),
     .CLKFBOUT_USE_FINE_PS("FALSE"),
     .CLKIN1_PERIOD(10.000000),
     .CLKIN2_PERIOD(0.000000),
-    .CLKOUT0_DIVIDE_F(12.500000),
+    .CLKOUT0_DIVIDE_F(36.125000),
     .CLKOUT0_DUTY_CYCLE(0.500000),
     .CLKOUT0_PHASE(0.000000),
     .CLKOUT0_USE_FINE_PS("FALSE"),

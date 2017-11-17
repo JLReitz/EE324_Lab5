@@ -38,13 +38,13 @@
     <Option Name="WTVcsLaunchSim" Val="0"/>
     <Option Name="WTRivieraLaunchSim" Val="0"/>
     <Option Name="WTActivehdlLaunchSim" Val="0"/>
-    <Option Name="WTXSimExportSim" Val="4"/>
-    <Option Name="WTModelSimExportSim" Val="4"/>
-    <Option Name="WTQuestaExportSim" Val="4"/>
-    <Option Name="WTIesExportSim" Val="4"/>
-    <Option Name="WTVcsExportSim" Val="4"/>
-    <Option Name="WTRivieraExportSim" Val="4"/>
-    <Option Name="WTActivehdlExportSim" Val="4"/>
+    <Option Name="WTXSimExportSim" Val="9"/>
+    <Option Name="WTModelSimExportSim" Val="9"/>
+    <Option Name="WTQuestaExportSim" Val="9"/>
+    <Option Name="WTIesExportSim" Val="9"/>
+    <Option Name="WTVcsExportSim" Val="9"/>
+    <Option Name="WTRivieraExportSim" Val="9"/>
+    <Option Name="WTActivehdlExportSim" Val="9"/>
     <Option Name="GenerateIPUpgradeLog" Val="TRUE"/>
     <Option Name="XSimRadix" Val="hex"/>
     <Option Name="XSimTimeUnit" Val="ns"/>
@@ -61,12 +61,6 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="System.bd" FileRelPathName="ip/System_processing_system7_0_1/System_processing_system7_0_1.xci">
-          <Proxy FileSetName="System_processing_system7_0_1"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="System.bd" FileRelPathName="ip/System_rst_ps7_0_50M_0/System_rst_ps7_0_50M_0.xci">
-          <Proxy FileSetName="System_rst_ps7_0_50M_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="System.bd" FileRelPathName="ip/System_Zybo_VGA_Basic_0_1/System_Zybo_VGA_Basic_0_1.xci">
           <Proxy FileSetName="System_Zybo_VGA_Basic_0_1"/>
         </CompFileExtendedInfo>
@@ -75,6 +69,12 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="System.bd" FileRelPathName="ip/System_proc_sys_reset_0_1/System_proc_sys_reset_0_1.xci">
           <Proxy FileSetName="System_proc_sys_reset_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="System.bd" FileRelPathName="ip/System_rst_ps7_0_50M_0/System_rst_ps7_0_50M_0.xci">
+          <Proxy FileSetName="System_rst_ps7_0_50M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="System.bd" FileRelPathName="ip/System_processing_system7_0_1/System_processing_system7_0_1.xci">
+          <Proxy FileSetName="System_processing_system7_0_1"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PSRCDIR/sources_1/bd/System/hdl/System_wrapper.v">

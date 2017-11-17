@@ -1,7 +1,7 @@
 -- Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
--- Date        : Tue Nov 14 13:04:26 2017
+-- Date        : Thu Nov 16 15:48:45 2017
 -- Host        : Jensen-Surface running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub -rename_top System_auto_pc_0 -prefix
 --               System_auto_pc_0_ System_auto_pc_0_stub.vhdl

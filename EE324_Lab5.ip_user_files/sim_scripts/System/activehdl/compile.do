@@ -61,9 +61,9 @@ vlog -work processing_system7_vip_v1_0_2  -sv2k12 "+incdir+../../../../EE324_Lab
 
 vlog -work xil_defaultlib  -v2k5 "+incdir+../../../../EE324_Lab5.srcs/sources_1/bd/System/ipshared/ec67/hdl" "+incdir+../../../../EE324_Lab5.srcs/sources_1/bd/System/ipshared/d5d3/hdl/verilog" "+incdir+../../../../EE324_Lab5.srcs/sources_1/bd/System/ipshared/e0a2/hdl" "+incdir+../../../../EE324_Lab5.srcs/sources_1/bd/System/ipshared/5123" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" "+incdir+../../../../EE324_Lab5.srcs/sources_1/bd/System/ipshared/ec67/hdl" "+incdir+../../../../EE324_Lab5.srcs/sources_1/bd/System/ipshared/d5d3/hdl/verilog" "+incdir+../../../../EE324_Lab5.srcs/sources_1/bd/System/ipshared/e0a2/hdl" "+incdir+../../../../EE324_Lab5.srcs/sources_1/bd/System/ipshared/5123" "+incdir+C:/Xilinx/Vivado/2017.3/data/xilinx_vip/include" \
 "../../../bd/System/ip/System_processing_system7_0_1/sim/System_processing_system7_0_1.v" \
-"../../../bd/System/ipshared/0475/hdl/VGA_Control.v" \
-"../../../bd/System/ipshared/0475/hdl/Zybo_VGA_Basic_v1_0_S_AXI.v" \
-"../../../bd/System/ipshared/0475/hdl/Zybo_VGA_Basic_v1_0.v" \
+"../../../bd/System/ipshared/471b/hdl/VGA_Control.v" \
+"../../../bd/System/ipshared/471b/hdl/Zybo_VGA_Basic_v1_0_S_AXI.v" \
+"../../../bd/System/ipshared/471b/hdl/Zybo_VGA_Basic_v1_0.v" \
 "../../../bd/System/ip/System_Zybo_VGA_Basic_0_1/sim/System_Zybo_VGA_Basic_0_1.v" \
 
 vcom -work lib_cdc_v1_0_2 -93 \

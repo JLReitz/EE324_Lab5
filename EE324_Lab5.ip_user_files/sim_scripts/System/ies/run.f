@@ -26,9 +26,9 @@
 -endlib
 -makelib ies_lib/xil_defaultlib \
   "../../../bd/System/ip/System_processing_system7_0_1/sim/System_processing_system7_0_1.v" \
-  "../../../bd/System/ipshared/0475/hdl/VGA_Control.v" \
-  "../../../bd/System/ipshared/0475/hdl/Zybo_VGA_Basic_v1_0_S_AXI.v" \
-  "../../../bd/System/ipshared/0475/hdl/Zybo_VGA_Basic_v1_0.v" \
+  "../../../bd/System/ipshared/471b/hdl/VGA_Control.v" \
+  "../../../bd/System/ipshared/471b/hdl/Zybo_VGA_Basic_v1_0_S_AXI.v" \
+  "../../../bd/System/ipshared/471b/hdl/Zybo_VGA_Basic_v1_0.v" \
   "../../../bd/System/ip/System_Zybo_VGA_Basic_0_1/sim/System_Zybo_VGA_Basic_0_1.v" \
 -endlib
 -makelib ies_lib/lib_cdc_v1_0_2 \
