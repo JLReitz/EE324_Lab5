@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1510879307">
+<GenRun Id="impl_1" LaunchPart="xc7z010clg400-1" LaunchTime="1511213511">
   <File Type="PWROPT-DCP" Name="System_wrapper_pwropt.dcp"/>
   <File Type="ROUTE-PWR" Name="System_wrapper_power_routed.rpt"/>
   <File Type="PA-TCL" Name="System_wrapper.tcl"/>
@@ -100,7 +100,9 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017"/>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2017">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>
@@ -111,9 +113,10 @@
     <Step Id="post_route_phys_opt_design"/>
     <Step Id="write_bitstream"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="System_Zybo_VGA_Basic_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="System_processing_system7_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="System_proc_sys_reset_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="System_clk_wiz_0_1"/>
   <BlockFileSet Type="BlockSrcs" Name="System_rst_ps7_0_50M_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="System_xbar_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="System_Zybo_VGA_Reconfigurable_0_0"/>
 </GenRun>

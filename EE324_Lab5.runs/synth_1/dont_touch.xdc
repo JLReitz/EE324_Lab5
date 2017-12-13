@@ -9,9 +9,6 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System || ORIG_
 # IP: bd/System/ip/System_processing_system7_0_1/System_processing_system7_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_processing_system7_0_1 || ORIG_REF_NAME==System_processing_system7_0_1} -quiet] -quiet
 
-# IP: bd/System/ip/System_Zybo_VGA_Basic_0_1/System_Zybo_VGA_Basic_0_1.xci
-set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_Zybo_VGA_Basic_0_1 || ORIG_REF_NAME==System_Zybo_VGA_Basic_0_1} -quiet] -quiet
-
 # IP: bd/System/ip/System_ps7_0_axi_periph_1/System_ps7_0_axi_periph_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_ps7_0_axi_periph_1 || ORIG_REF_NAME==System_ps7_0_axi_periph_1} -quiet] -quiet
 
@@ -23,6 +20,12 @@ set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_clk_wiz_
 
 # IP: bd/System/ip/System_proc_sys_reset_0_1/System_proc_sys_reset_0_1.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_proc_sys_reset_0_1 || ORIG_REF_NAME==System_proc_sys_reset_0_1} -quiet] -quiet
+
+# IP: bd/System/ip/System_Zybo_VGA_Reconfigurable_0_0/System_Zybo_VGA_Reconfigurable_0_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_Zybo_VGA_Reconfigurable_0_0 || ORIG_REF_NAME==System_Zybo_VGA_Reconfigurable_0_0} -quiet] -quiet
+
+# IP: bd/System/ip/System_xbar_0/System_xbar_0.xci
+set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_xbar_0 || ORIG_REF_NAME==System_xbar_0} -quiet] -quiet
 
 # IP: bd/System/ip/System_auto_cc_0/System_auto_cc_0.xci
 set_property DONT_TOUCH TRUE [get_cells -hier -filter {REF_NAME==System_auto_cc_0 || ORIG_REF_NAME==System_auto_cc_0} -quiet] -quiet

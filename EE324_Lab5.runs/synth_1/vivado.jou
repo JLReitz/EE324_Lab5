@@ -2,8 +2,8 @@
 # Vivado v2017.3.1 (64-bit)
 # SW Build 2035080 on Fri Oct 20 14:20:01 MDT 2017
 # IP Build 2034413 on Fri Oct 20 15:56:25 MDT 2017
-# Start of session at: Thu Nov 16 16:41:49 2017
-# Process ID: 12312
+# Start of session at: Mon Nov 20 13:31:53 2017
+# Process ID: 11948
 # Current directory: C:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.runs/synth_1
 # Command line: vivado.exe -log System_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source System_wrapper.tcl
 # Log file: C:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.runs/synth_1/System_wrapper.vds

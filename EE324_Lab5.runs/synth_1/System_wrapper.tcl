@@ -16,6 +16,7 @@ proc create_report { reportName command } {
     send_msg_id runtcl-5 warning "$msg"
   }
 }
+set_msg_config -id {HDL-1065} -limit 10000
 create_project -in_memory -part xc7z010clg400-1
 
 set_param project.singleFileAddWarning.threshold 0
@@ -42,6 +43,7 @@ set_property used_in_implementation false [get_files -all c:/Users/jlrei/Documen
 set_property used_in_implementation false [get_files -all c:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.srcs/sources_1/bd/System/ip/System_proc_sys_reset_0_1/System_proc_sys_reset_0_1_board.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.srcs/sources_1/bd/System/ip/System_proc_sys_reset_0_1/System_proc_sys_reset_0_1.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.srcs/sources_1/bd/System/ip/System_proc_sys_reset_0_1/System_proc_sys_reset_0_1_ooc.xdc]
+set_property used_in_implementation false [get_files -all c:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.srcs/sources_1/bd/System/ip/System_xbar_0/System_xbar_0_ooc.xdc]
 set_property used_in_synthesis false [get_files -all c:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.srcs/sources_1/bd/System/ip/System_auto_cc_0/System_auto_cc_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.srcs/sources_1/bd/System/ip/System_auto_cc_0/System_auto_cc_0_clocks.xdc]
 set_property used_in_implementation false [get_files -all c:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.srcs/sources_1/bd/System/ip/System_auto_cc_0/System_auto_cc_0_ooc.xdc]

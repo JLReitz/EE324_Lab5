@@ -60,6 +60,7 @@ proc step_failed { step } {
   close $ch
 }
 
+set_msg_config -id {HDL-1065} -limit 10000
 
 start_step init_design
 set ACTIVE_STEP init_design
@@ -70,7 +71,7 @@ set rc [catch {
   set_param project.singleFileAddWarning.threshold 0
   set_property webtalk.parent_dir C:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.cache/wt [current_project]
   set_property parent.project_path C:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.xpr [current_project]
-  set_property ip_repo_paths C:/Users/jlrei/Documents/SourceTree/Vivado_IP_Repo [current_project]
+  set_property ip_repo_paths c:/Users/jlrei/Documents/SourceTree/Vivado_IP_Repo [current_project]
   set_property ip_output_repo C:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_FIFO XPM_MEMORY} [current_project]

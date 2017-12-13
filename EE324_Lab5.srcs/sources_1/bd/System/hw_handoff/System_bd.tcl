@@ -164,23 +164,20 @@ proc create_root_design { parentCell } {
   set VGA_HS [ create_bd_port -dir O VGA_HS ]
   set VGA_R [ create_bd_port -dir O -from 4 -to 0 VGA_R ]
   set VGA_VS [ create_bd_port -dir O VGA_VS ]
-  set reset [ create_bd_port -dir I -type rst reset ]
-  set_property -dict [ list \
-   CONFIG.POLARITY {ACTIVE_HIGH} \
- ] $reset
 
-  # Create instance: Zybo_VGA_Basic_0, and set properties
-  set Zybo_VGA_Basic_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Zybo_VGA_Basic:1.0 Zybo_VGA_Basic_0 ]
+  # Create instance: Zybo_VGA_Reconfigurable_0, and set properties
+  set Zybo_VGA_Reconfigurable_0 [ create_bd_cell -type ip -vlnv xilinx.com:user:Zybo_VGA_Reconfigurable:1.0 Zybo_VGA_Reconfigurable_0 ]
 
   # Create instance: clk_wiz_0, and set properties
   set clk_wiz_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:clk_wiz:5.4 clk_wiz_0 ]
   set_property -dict [ list \
-   CONFIG.CLKOUT1_JITTER {319.783} \
-   CONFIG.CLKOUT1_PHASE_ERROR {246.739} \
-   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {25.175} \
-   CONFIG.MMCM_CLKFBOUT_MULT_F {36.375} \
-   CONFIG.MMCM_CLKOUT0_DIVIDE_F {36.125} \
+   CONFIG.CLKOUT1_JITTER {245.495} \
+   CONFIG.CLKOUT1_PHASE_ERROR {245.344} \
+   CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {74.25} \
+   CONFIG.MMCM_CLKFBOUT_MULT_F {37.125} \
+   CONFIG.MMCM_CLKOUT0_DIVIDE_F {12.500} \
    CONFIG.MMCM_DIVCLK_DIVIDE {4} \
+   CONFIG.USE_DYN_RECONFIG {true} \
  ] $clk_wiz_0
 
   # Create instance: proc_sys_reset_0, and set properties
@@ -551,7 +548,7 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {1} \
+   CONFIG.NUM_MI {2} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_50M, and set properties
@@ -561,25 +558,26 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
   connect_bd_intf_net -intf_net processing_system7_0_FIXED_IO [get_bd_intf_ports FIXED_IO] [get_bd_intf_pins processing_system7_0/FIXED_IO]
   connect_bd_intf_net -intf_net processing_system7_0_M_AXI_GP0 [get_bd_intf_pins processing_system7_0/M_AXI_GP0] [get_bd_intf_pins ps7_0_axi_periph/S00_AXI]
-  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins Zybo_VGA_Basic_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M00_AXI [get_bd_intf_pins Zybo_VGA_Reconfigurable_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M00_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M01_AXI [get_bd_intf_pins clk_wiz_0/s_axi_lite] [get_bd_intf_pins ps7_0_axi_periph/M01_AXI]
 
   # Create port connections
-  connect_bd_net -net Zybo_VGA_Basic_0_VGA_B [get_bd_ports VGA_B] [get_bd_pins Zybo_VGA_Basic_0/VGA_B]
-  connect_bd_net -net Zybo_VGA_Basic_0_VGA_G [get_bd_ports VGA_G] [get_bd_pins Zybo_VGA_Basic_0/VGA_G]
-  connect_bd_net -net Zybo_VGA_Basic_0_VGA_HS [get_bd_ports VGA_HS] [get_bd_pins Zybo_VGA_Basic_0/VGA_HS]
-  connect_bd_net -net Zybo_VGA_Basic_0_VGA_R [get_bd_ports VGA_R] [get_bd_pins Zybo_VGA_Basic_0/VGA_R]
-  connect_bd_net -net Zybo_VGA_Basic_0_VGA_VS [get_bd_ports VGA_VS] [get_bd_pins Zybo_VGA_Basic_0/VGA_VS]
-  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins Zybo_VGA_Basic_0/pixel_clk] [get_bd_pins Zybo_VGA_Basic_0/s_axi_aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins ps7_0_axi_periph/M00_ACLK]
+  connect_bd_net -net Zybo_VGA_Reconfigurable_0_VGA_B [get_bd_ports VGA_B] [get_bd_pins Zybo_VGA_Reconfigurable_0/VGA_B]
+  connect_bd_net -net Zybo_VGA_Reconfigurable_0_VGA_G [get_bd_ports VGA_G] [get_bd_pins Zybo_VGA_Reconfigurable_0/VGA_G]
+  connect_bd_net -net Zybo_VGA_Reconfigurable_0_VGA_HS [get_bd_ports VGA_HS] [get_bd_pins Zybo_VGA_Reconfigurable_0/VGA_HS]
+  connect_bd_net -net Zybo_VGA_Reconfigurable_0_VGA_R [get_bd_ports VGA_R] [get_bd_pins Zybo_VGA_Reconfigurable_0/VGA_R]
+  connect_bd_net -net Zybo_VGA_Reconfigurable_0_VGA_VS [get_bd_ports VGA_VS] [get_bd_pins Zybo_VGA_Reconfigurable_0/VGA_VS]
+  connect_bd_net -net clk_wiz_0_clk_out1 [get_bd_pins Zybo_VGA_Reconfigurable_0/pixel_clk] [get_bd_pins Zybo_VGA_Reconfigurable_0/s_axi_aclk] [get_bd_pins clk_wiz_0/clk_out1] [get_bd_pins proc_sys_reset_0/slowest_sync_clk] [get_bd_pins ps7_0_axi_periph/M00_ACLK]
   connect_bd_net -net clk_wiz_0_locked [get_bd_pins clk_wiz_0/locked] [get_bd_pins proc_sys_reset_0/dcm_locked]
-  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins Zybo_VGA_Basic_0/s_axi_aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net proc_sys_reset_0_peripheral_aresetn [get_bd_pins Zybo_VGA_Reconfigurable_0/s_axi_aresetn] [get_bd_pins proc_sys_reset_0/peripheral_aresetn] [get_bd_pins ps7_0_axi_periph/M00_ARESETN]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins clk_wiz_0/clk_in1] [get_bd_pins clk_wiz_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins proc_sys_reset_0/ext_reset_in] [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net reset_0_1 [get_bd_ports reset] [get_bd_pins clk_wiz_0/reset]
   connect_bd_net -net rst_ps7_0_50M_interconnect_aresetn [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins rst_ps7_0_50M/interconnect_aresetn]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins clk_wiz_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
 
   # Create address segments
-  create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Zybo_VGA_Basic_0/S_AXI/S_AXI_reg] SEG_Zybo_VGA_Basic_0_S_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C10000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Zybo_VGA_Reconfigurable_0/S_AXI/S_AXI_reg] SEG_Zybo_VGA_Reconfigurable_0_S_AXI_reg
+  create_bd_addr_seg -range 0x00010000 -offset 0x43C00000 [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs clk_wiz_0/s_axi_lite/Reg] SEG_clk_wiz_0_Reg
 
 
   # Restore current instance

@@ -23,13 +23,40 @@
 
 /******************************************************************/
 
-/* Definitions for driver ZYBO_VGA_BASIC */
-#define XPAR_ZYBO_VGA_BASIC_NUM_INSTANCES 1
+/* Definitions for driver ZYBO_VGA_RECONFIGURABLE */
+#define XPAR_ZYBO_VGA_RECONFIGURABLE_NUM_INSTANCES 1
 
-/* Definitions for peripheral ZYBO_VGA_BASIC_0 */
-#define XPAR_ZYBO_VGA_BASIC_0_DEVICE_ID 0
-#define XPAR_ZYBO_VGA_BASIC_0_S_AXI_BASEADDR 0x43C00000
-#define XPAR_ZYBO_VGA_BASIC_0_S_AXI_HIGHADDR 0x43C0FFFF
+/* Definitions for peripheral ZYBO_VGA_RECONFIGURABLE_0 */
+#define XPAR_ZYBO_VGA_RECONFIGURABLE_0_DEVICE_ID 0
+#define XPAR_ZYBO_VGA_RECONFIGURABLE_0_S_AXI_BASEADDR 0x43C10000
+#define XPAR_ZYBO_VGA_RECONFIGURABLE_0_S_AXI_HIGHADDR 0x43C1FFFF
+
+
+/******************************************************************/
+
+/* Definitions for driver CLK_WIZ */
+#define XPAR_XCLK_WIZ_NUM_INSTANCES 1
+
+/* Definitions for peripheral CLK_WIZ_0 */
+#define XPAR_CLK_WIZ_0_DEVICE_ID 0
+#define XPAR_CLK_WIZ_0_BASEADDR 0x43C00000
+#define XPAR_CLK_WIZ_0_HIGHADDR 0x43C0FFFF
+#define XPAR_CLK_WIZ_0_ENABLE_CLOCK_MONITOR 0
+#define XPAR_CLK_WIZ_0_ENABLE_USER_CLOCK0 0
+#define XPAR_CLK_WIZ_0_ENABLE_USER_CLOCK1 0
+#define XPAR_CLK_WIZ_0_ENABLE_USER_CLOCK2 0
+#define XPAR_CLK_WIZ_0_ENABLE_USER_CLOCK3 0
+#define XPAR_CLK_WIZ_0_REF_CLK_FREQ 100.0
+#define XPAR_CLK_WIZ_0_USER_CLK_FREQ0 100.0
+#define XPAR_CLK_WIZ_0_USER_CLK_FREQ1 100.0
+#define XPAR_CLK_WIZ_0_USER_CLK_FREQ2 100.0
+#define XPAR_CLK_WIZ_0_USER_CLK_FREQ3 100.0
+#define XPAR_CLK_WIZ_0_PRECISION 1
+#define XPAR_CLK_WIZ_0_ENABLE_PLL0 0
+#define XPAR_CLK_WIZ_0_ENABLE_PLL1 0
+
+
+/******************************************************************/
 
 
 /******************************************************************/

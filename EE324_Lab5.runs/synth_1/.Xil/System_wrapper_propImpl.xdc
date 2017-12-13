@@ -1,6 +1,4 @@
 set_property SRC_FILE_INFO {cfile:C:/Users/jlrei/Documents/SourceTree/EE324_Lab5/EE324_Lab5.srcs/constrs_1/imports/Vivado/Zybo_Master_Constraints.xdc rfile:../../../EE324_Lab5.srcs/constrs_1/imports/Vivado/Zybo_Master_Constraints.xdc id:1} [current_design]
-set_property src_info {type:XDC file:1 line:20 export:INPUT save:INPUT read:READ} [current_design]
-set_property -dict { PACKAGE_PIN R18   IOSTANDARD LVCMOS33 } [get_ports { reset }]; #IO_L20N_T3_34 Sch=BTN0
 set_property src_info {type:XDC file:1 line:129 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN M19   IOSTANDARD LVCMOS33 } [get_ports { VGA_R[0] }]; #IO_L7P_T1_AD2P_35 Sch=VGA_R1
 set_property src_info {type:XDC file:1 line:130 export:INPUT save:INPUT read:READ} [current_design]

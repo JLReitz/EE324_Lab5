@@ -1,0 +1,277 @@
+/*
+ * main.c
+ *
+ *  Created on: Nov 14, 2017
+ *      Author: jlrei
+ */
+
+#include "xparameters.h"
+#include "xil_types.h"
+
+#define ClkWiz_BaseAddr 0x43C00000
+#define VGA_BaseAddr	0x43C10000
+#define VGA_Disp_En		0x43C10000
+#define VGA_H_Sync		0x43C10004
+#define VGA_H_BP		0x43C10008
+#define VGA_H_FP		0x43C1000
+#define VGA_H_Range		0x43C1000C
+#define VGA_H_LR		0x43C10010
+#define VGA_V_Sync		0x43C10014
+#define VGA_V_BP		0x43C10018
+#define VGA_V_FP		0x43C1001C
+#define VGA_V_Range		0x43C10020
+#define VGA_V_TB		0x43C10024
+#define VGA_Color		0x43C10028
+
+
+void writeValue(u32 * addr, u32 value)
+{
+	*addr = value;
+}
+
+u32 readValue(u32 * addr)
+{
+	return *addr;
+}
+
+void disp_enable()
+{
+	writeValue((u32 *)VGA_Disp_En, (u32)1);
+}
+
+void disp_disable()
+{
+	writeValue((u32 *)VGA_Disp_En, (u32)0);
+}
+
+int set_Clock_Wizard(u32 resolution)
+{
+	int i = 0;
+
+	switch(resolution)
+	{
+	case 0: //25.175 MHz
+
+		//Check status register to make sure everything's gucci
+		while(readValue((u32 *)(ClkWiz_BaseAddr+0x04)) != 1)
+		{
+			i++;
+
+			if(i>5)
+				return 0;
+		}
+
+		//Write Mult/Div values to register
+		writeValue((u32 *)(ClkWiz_BaseAddr+0x200), (u32)0x002332C8);
+
+		//Check status register again
+		while(readValue((u32 *)(ClkWiz_BaseAddr+0x04)) != 1)
+		{
+			i++;
+
+			if(i>5)
+				return 0;
+		}
+
+		//Write to Clock Reconfiguration register
+		writeValue((u32 *)(ClkWiz_BaseAddr+0x25C), (u32)0x03);
+
+		break;
+
+	case 1: //74.25 MHz
+
+		//Check status register to make sure everything's gucci
+		while(readValue((u32 *)(ClkWiz_BaseAddr+0x04)) != 0)
+		{
+			i++;
+
+			if(i>5)
+				return 0;
+		}
+
+		//Write Mult/Div values to register
+		writeValue((u32 *)(ClkWiz_BaseAddr+0x200), (u32)0x004BDE03);
+
+		//Check status register again
+		while(readValue((u32 *)(ClkWiz_BaseAddr+0x04)) != 1)
+		{
+			i++;
+
+			if(i>5)
+				return 0;
+		}
+
+		//Write to Clock Reconfiguration register
+		writeValue((u32 *)(ClkWiz_BaseAddr+0x25C), (u32)0x03);
+
+		break;
+
+	case 2: //148.5 MHz
+
+		//Check status register to make sure everything's gucci
+		while(readValue((u32 *)(ClkWiz_BaseAddr+0x04)) != 0)
+		{
+			i++;
+
+			if(i>5)
+				return 0;
+		}
+
+		//Write Mult/Div values to register
+		writeValue((u32 *)(ClkWiz_BaseAddr+0x200), (u32)0x00550E0A);
+
+		//Check status register again
+		while(readValue((u32 *)(ClkWiz_BaseAddr+0x04)) != 1)
+		{
+			i++;
+
+			if(i>5)
+				return 0;
+		}
+
+		//Write to Clock Reconfiguration register
+		writeValue((u32 *)(ClkWiz_BaseAddr+0x25C), (u32)0x03);
+
+		break;
+	}
+
+	return 1;
+}
+
+void setConfig_640_480()
+{
+	writeValue((u32 *)VGA_H_Sync, (u32)96);
+	writeValue((u32 *)VGA_H_BP, (u32)48);
+	writeValue((u32 *)VGA_H_FP, (u32)16);
+	writeValue((u32 *)VGA_H_Range, (u32)640);
+	writeValue((u32 *)VGA_H_LR, (u32)0);
+	writeValue((u32 *)VGA_V_Sync, (u32)2);
+	writeValue((u32 *)VGA_V_BP, (u32)33);
+	writeValue((u32 *)VGA_V_FP, (u32)10);
+	writeValue((u32 *)VGA_V_Range, (u32)480);
+	writeValue((u32 *)VGA_V_TB, (u32)0);
+}
+
+void setConfig_1280_720()
+{
+	writeValue((u32 *)VGA_H_Sync, (u32)40);
+	writeValue((u32 *)VGA_H_BP, (u32)220);
+	writeValue((u32 *)VGA_H_FP, (u32)110);
+	writeValue((u32 *)VGA_H_Range, (u32)1280);
+	writeValue((u32 *)VGA_H_LR, (u32)0);
+	writeValue((u32 *)VGA_V_Sync, (u32)5);
+	writeValue((u32 *)VGA_V_BP, (u32)20);
+	writeValue((u32 *)VGA_V_FP, (u32)5);
+	writeValue((u32 *)VGA_V_Range, (u32)720);
+	writeValue((u32 *)VGA_V_TB, (u32)0);
+}
+
+void setConfig_1920_1080()
+{
+	writeValue((u32 *)VGA_H_Sync, (u32)44);
+	writeValue((u32 *)VGA_H_BP, (u32)148);
+	writeValue((u32 *)VGA_H_FP, (u32)88);
+	writeValue((u32 *)VGA_H_Range, (u32)1920);
+	writeValue((u32 *)VGA_H_LR, (u32)0);
+	writeValue((u32 *)VGA_V_Sync, (u32)5);
+	writeValue((u32 *)VGA_V_BP, (u32)36);
+	writeValue((u32 *)VGA_V_FP, (u32)4);
+	writeValue((u32 *)VGA_V_Range, (u32)1080);
+	writeValue((u32 *)VGA_V_TB, (u32)0);
+}
+
+void setConfig(int resolution)
+{
+	switch(resolution)
+	{
+	case 0:
+
+		if(set_Clock_Wizard(resolution))
+			setConfig_640_480();
+
+		break;
+
+	case 1:
+
+		if(set_Clock_Wizard(resolution))
+			setConfig_1280_720();
+
+		break;
+
+	case 2:
+		if(set_Clock_Wizard(resolution))
+			setConfig_1920_1080();
+
+		break;
+	}
+}
+
+void setColor_Black(u32 * colorAddr)
+{
+	writeValue(colorAddr, (u32)0x00000000);
+}
+
+void setColor_White(u32 * colorAddr)
+{
+	writeValue(colorAddr, (u32)0xFFFFFFFF);
+}
+
+void setColor_Red(u32 * colorAddr)
+{
+	writeValue(colorAddr, (u32)0x0000001F);
+}
+
+void setColor_Blue(u32 * colorAddr)
+{
+	writeValue(colorAddr, (u32)0x000001E0);
+}
+
+void setColor_Green(u32 * colorAddr)
+{
+	writeValue(colorAddr, (u32)0x0000FE00);
+}
+
+int msleep(u32 msec)
+{
+    volatile u32 i = 0;
+
+    for(i = 0; i < msec * 1000000; i++);
+}
+
+void main()
+{
+	disp_disable();
+	setConfig(0);
+	setColor_Red((u32 *)VGA_Color);
+	setColor_White((u32 *)(VGA_Color+4));
+	disp_enable();
+
+	while(1)
+	{
+		for(int i=0; i<3; i++)
+		{
+			disp_disable();
+			setConfig(1);
+
+			switch(i)
+			{
+			case 0:
+				setColor_Red((u32 *)VGA_Color);
+				setColor_White((u32 *)(VGA_Color+4));
+				break;
+			case 1:
+				setColor_Green((u32 *)VGA_Color);
+				setColor_White((u32 *)(VGA_Color+4));
+				break;
+			case 2:
+				setColor_Blue((u32 *)VGA_Color);
+				setColor_White((u32 *)(VGA_Color+4));
+				break;
+			}
+
+			disp_enable();
+
+			msleep(500);
+		}
+	}
+}

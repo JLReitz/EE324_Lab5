@@ -1,7 +1,7 @@
 //Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 //--------------------------------------------------------------------------------
 //Tool Version: Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
-//Date        : Thu Nov 16 16:40:07 2017
+//Date        : Mon Nov 20 13:26:04 2017
 //Host        : Jensen-Surface running 64-bit major release  (build 9200)
 //Command     : generate_target System_wrapper.bd
 //Design      : System_wrapper
@@ -35,8 +35,7 @@ module System_wrapper
     VGA_G,
     VGA_HS,
     VGA_R,
-    VGA_VS,
-    reset);
+    VGA_VS);
   inout [14:0]DDR_addr;
   inout [2:0]DDR_ba;
   inout DDR_cas_n;
@@ -63,7 +62,6 @@ module System_wrapper
   output VGA_HS;
   output [4:0]VGA_R;
   output VGA_VS;
-  input reset;
 
   wire [14:0]DDR_addr;
   wire [2:0]DDR_ba;
@@ -91,7 +89,6 @@ module System_wrapper
   wire VGA_HS;
   wire [4:0]VGA_R;
   wire VGA_VS;
-  wire reset;
 
   System System_i
        (.DDR_addr(DDR_addr),
@@ -119,6 +116,5 @@ module System_wrapper
         .VGA_G(VGA_G),
         .VGA_HS(VGA_HS),
         .VGA_R(VGA_R),
-        .VGA_VS(VGA_VS),
-        .reset(reset));
+        .VGA_VS(VGA_VS));
 endmodule

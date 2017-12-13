@@ -1,7 +1,7 @@
 Copyright 1986-2017 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2017.3.1 (win64) Build 2035080 Fri Oct 20 14:20:01 MDT 2017
-| Date                      : Thu Nov 16 16:43:58 2017
+| Date                      : Mon Nov 20 13:34:01 2017
 | Host                      : Jensen-Surface running 64-bit major release  (build 9200)
 | Command                   : report_io -file System_wrapper_io_placed.rpt
 | Design                    : System_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|           149 |
+|           148 |
 +---------------+
 
 
@@ -332,7 +332,7 @@ Table of Contents
 | R15        |                   | High Range | VCCO_34                 | VCCO          |                   |      34 |            |      |                     |                      |    3.30 |            |           |          |      |                  |              |                   |              |
 | R16        |                   | High Range | IO_L19P_T3_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R17        |                   | High Range | IO_L19N_T3_VREF_34      | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
-| R18        | reset             | High Range | IO_L20N_T3_34           | INPUT         | LVCMOS33          |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
+| R18        |                   | High Range | IO_L20N_T3_34           | User IO       |                   |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | R19        | VGA_VS            | High Range | IO_0_34                 | OUTPUT        | LVCMOS33          |      34 |         12 | SLOW |                     |            FP_VTT_50 |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | R20        |                   |            | GND                     | GND           |                   |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
 | T1         | DDR_dm[2]         |            | PS_DDR_DM2_502          | INOUT         | SSTL15_T_DCI      |         |            | FAST |           DCI SPLIT |            FP_VTT_50 |         | FIXED      |           |          |      | SPLIT            |              |                   |              |
